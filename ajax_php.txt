@@ -1,0 +1,24 @@
+<script>
+function saveAsNewName() {
+$.ajax({
+    type: "POST",
+    url: 'x.php',
+    data: {name: 'Wayne', age: 27},
+    success: function(data){
+        alert(data);
+    }
+});
+}
+
+</script>
+
+
+<?php
+if (isset($_REQUEST['name'])) {
+ $checked_arr = $_REQUEST['name'];
+ echo $checked_arr;
+
+
+} 
+
+?>
